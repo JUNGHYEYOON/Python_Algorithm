@@ -163,6 +163,22 @@ class DoublyLinkedList:
                prev=self.getAt(pos-1)
                return self.popAfter(prev)
            '''
+    def concat(self, L):
+        L1_tail=self.tail.prev
+        L2_head=L.head.next
+        
+        if L1_tail != None and L2_head !=None:
+            L1_tail.next=L2_head
+            L2_head.prev=L1_tail
+            self.tail=L.tail
+        elif L1_tail is None:
+            self.head=L2.head
+            self.tail=L2.tail
+        else:
+            pass
+        self.nodeCount+=L.nodeCount
+        
+        
 def solution(x):
     return 0
     
