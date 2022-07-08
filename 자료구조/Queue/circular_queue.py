@@ -59,18 +59,4 @@ class CircularQueue:
 def solution(x):
     return 0
 
-CQ=CircularQueue(4)
-CQ.enqueue(1)
-CQ.enqueue(2)
-CQ.enqueue(3)
-CQ.enqueue(4)
-print(CQ.peek())
-
-print(CQ.dequeue())
-print(CQ.dequeue())
-print(CQ.dequeue())
-
-
-CQ.enqueue(5)
-print('peel',CQ.peek())
 
